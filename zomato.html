@@ -51,104 +51,83 @@
 	<h1> <b>Zomato Ordering </b></h1>
 </div>
 <div class="food">
-	<img src="http://findthemoat.com/wp-content/uploads/2017/02/dominospizze.jpg" height="250" width="280">
-	<button id="b1">Show Menu</button><br>
+	<img id="c1" src="http://findthemoat.com/wp-content/uploads/2017/02/dominospizze.jpg" height="250" width="280">
 	<form id="set1">
 		<input type="checkbox" name="food" >COUNTRY-SPECIAL<br>
 		<input type="checkbox" name="food" >FARM HOUSE<br>
 		<input type="checkbox" name="food" >PEPPY PANEER<br>
 		<input type="checkbox" name="food" >5 PEPPER<br>
-		<input type="checkbox" name="food" >FRESH-VEGGIE
+		<input type="checkbox" name="food" >FRESH-VEGGIE<br>
+		<button type="button">ORDER</button>
 	</form>
 	
 </div>
 <div class="food">
-	<img src="http://paypizzapal.com/wp-content/uploads/2014/01/pizza-hut2.jpg" height="250" width="280">
-	<button id="b2">Show Menu</button><br>
+	<img id="c2" src="http://paypizzapal.com/wp-content/uploads/2014/01/pizza-hut2.jpg" height="250" width="280">
 	<form id="set2">
 		<input type="checkbox" name="food" >Paneer Vegorama<br>
 		<input type="checkbox" name="food" >Exotica<br>
 		<input type="checkbox" name="food" >Veggie Supreme<br>
 		<input type="checkbox" name="food" >Tandori Paneer<br>
 		<input type="checkbox" name="food" >Country Feast<br>
+		<button type="button">ORDER</button>
 	</form>
 	
 </div>
 <div class="food">
-	<img src="http://www.kfc.dk/wp-content/uploads/2016/03/New_logo_0316.png" height="250" width="280">
-	<button id="b3">Show Menu</button><br>
+	<img id="c3" src="http://www.kfc.dk/wp-content/uploads/2016/03/New_logo_0316.png" height="250" width="280">
 	<form id=set3>
 		<input type="checkbox" name="food" >Potato Krisper<br>
 		<input type="checkbox" name="food" >Chicken Snacker<br>
 		<input type="checkbox" name="food" >Paneer Zinger<br>
 		<input type="checkbox" name="food" >Chicken Rockin' Burger<br>
 		<input type="checkbox" name="food" >Cheezy Crunch Burger<br>
+		<button type="button">ORDER</button>
 	</form>
 	
 </div>
 <div class="food">
-	<img src="http://www.cbelmira.com/wp-content/uploads/2017/05/mcdonalds.jpg" height="250" width="280" >
-	<button id="b4">Show Menu</button><br>
+	<img id="c4" src="http://www.cbelmira.com/wp-content/uploads/2017/05/mcdonalds.jpg" height="250" width="280" >
 	<form id="set4">
 		<input type="checkbox" name="food" >Big Mac<br>
 		<input type="checkbox" name="food" >Hamburger<br>
 		<input type="checkbox" name="food" >Cheeseburger<br>
 		<input type="checkbox" name="food" >McDouble<br>
 		<input type="checkbox" name="food" >Double Cheeseburger<br>
+		<button type="button">ORDER</button>
 	</form>
 
 </div>
 <script src="jquery-2.2.0.min.js"></script>
 <script>
 	$(document).ready(function(){
-		$("#b1").on('click',function(){
-			if($(this).html()=="Show Menu") {
-				$(this).html("Hide");
-				$("#set1").show()
-			}
-			else{
-				$(this).html("Show Menu");
-				$("#set1").hide();
-			}
+		$("#c1").on('click',function(){
+			$('#set1').toggle();
+			$('#set2').hide();
+			$('#set3').hide();
+			$('#set4').hide();
 		})
-		$("#b2").on('click',function(){
-			if($(this).html()=="Show Menu") {
-				$(this).html("Hide");
-				$("#set2").show()
-			}
-			else{
-				$(this).html("Show Menu");
-				$("#set2").hide();
-			}
+		$("#c2").on('click',function(){
+			$('#set1').hide();
+			$('#set2').toggle();
+			$('#set3').hide();
+			$('#set4').hide();
+			
 		})
-		$("#b3").on('click',function(){
-			if($(this).html()=="Show Menu") {
-				$(this).html("Hide");
-				$("#set3").show()
-			}
-			else{
-				$(this).html("Show Menu");
-				$("#set3").hide();
-			}
+		$("#c3").on('click',function(){
+			$('#set1').hide();
+			$('#set2').hide();
+			$('#set3').toggle();
+			$('#set4').hide();
+			
 		})
-		$("#b4").on('click',function(){
-			if($(this).html()=="Show Menu") {
-				$(this).html("Hide");
-				$("#set4").show()
-			}
-			else{
-				$(this).html("Show Menu");
-				$("#set4").hide();
-			}
+		$("#c4").on('click',function(){
+			$('#set1').hide();
+			$('#set2').hide();
+			$('#set3').hide();
+			$('#set4').toggle();
 		})
-
-
-
-
-
-
-
-	})
+})
 
 </script>
 
