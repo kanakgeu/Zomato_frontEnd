@@ -13,9 +13,8 @@
 			background-image: cover;
 			height: 200px;
 			width: 1300px;
-		
-			 background-position:center;
-    //background-repeat:no-repeat;
+			background-position:center;
+   			 //background-repeat:no-repeat;
 		}
 		.food{
 			display:inline-block;
@@ -46,7 +45,6 @@
 		.food button{
 			text-align: center;
 			border: 2px solid black;
-		
 		}
 		body{
 			background-color: #F08080;
@@ -54,9 +52,6 @@
 		.restro img{
 			height: 200px;
 			width: 2000px;
-		}
-		h1{
-			font-weight: 60px;
 		}
 	</style>
 </head>
@@ -70,53 +65,49 @@
 	<img id="c1" src="http://findthemoat.com/wp-content/uploads/2017/02/dominospizze.jpg" height="250" width="280">
 	<button id="d1">Show Menu</button>
 	<form id="set1">
-		<input type="checkbox" name="food" >COUNTRY-SPECIAL<br>
-		<input type="checkbox" name="food" >FARM HOUSE<br>
-		<input type="checkbox" name="food" >PEPPY PANEER<br>
-		<input type="checkbox" name="food" >5 PEPPER<br>
-		<input type="checkbox" name="food" >FRESH-VEGGIE<br>
+		<input type="checkbox" class="dom" >COUNTRY-SPECIAL<br>
+		<input type="checkbox" class="dom" >FARM HOUSE<br>
+		<input type="checkbox" class="dom" >PEPPY PANEER<br>
+		<input type="checkbox" class="dom" >5 PEPPER<br>
+		<input type="checkbox" class="dom" >FRESH-VEGGIE<br>
 		<input type="button" onclick="mybutton()" value="ORDER">
 	</form>
-	
 </div>
 <div class="food">
 	<img id="c2" src="http://paypizzapal.com/wp-content/uploads/2014/01/pizza-hut2.jpg" height="250" width="280">
 	<button id="d2">Show Menu</button>
 	<form id="set2">
-		<input type="checkbox" name="food" >Paneer Vegorama<br>
-		<input type="checkbox" name="food" >Exotica<br>
-		<input type="checkbox" name="food" >Veggie Supreme<br>
-		<input type="checkbox" name="food" >Tandori Paneer<br>
-		<input type="checkbox" name="food" >Country Feast<br>
-		<input type="button" onclick="mybutton()" value="ORDER">
+		<input type="checkbox" class="hut" >Paneer Vegorama<br>
+		<input type="checkbox" class="hut" >Exotica<br>
+		<input type="checkbox" class="hut" >Veggie Supreme<br>
+		<input type="checkbox" class="hut" >Tandori Paneer<br>
+		<input type="checkbox" class="hut" >Country Feast<br>
+		<input type="button" onclick="mybutton1()" value="ORDER">
 	</form>
-	
 </div>
 <div class="food">
 	<img id="c3" src="http://www.kfc.dk/wp-content/uploads/2016/03/New_logo_0316.png" height="250" width="280">
 	<button id="d3">Show Menu</button>
 	<form id=set3>
-		<input type="checkbox" name="food" >Potato Krisper<br>
-		<input type="checkbox" name="food" >Chicken Snacker<br>
-		<input type="checkbox" name="food" >Paneer Zinger<br>
-		<input type="checkbox" name="food" >Chicken Rockin' Burger<br>
-		<input type="checkbox" name="food" >Cheezy Crunch Burger<br>
-		<input type="button" onclick="mybutton()" value="ORDER">
+		<input type="checkbox" class="kfc" >Potato Krisper<br>
+		<input type="checkbox" class="kfc" >Chicken Snacker<br>
+		<input type="checkbox" class="kfc" >Paneer Zinger<br>
+		<input type="checkbox" class="kfc" >Chicken Rockin' Burger<br>
+		<input type="checkbox" class="kfc" >Cheezy Crunch Burger<br>
+		<input type="button" onclick="mybutton2()" value="ORDER">
 	</form>
-	
 </div>
 <div class="food">
 	<img id="c4" src="http://www.cbelmira.com/wp-content/uploads/2017/05/mcdonalds.jpg" height="250" width="280" >
 	<button id="d4">Show Menu</button>
 	<form id="set4">
-		<input type="checkbox" name="food" >Big Mac<br>
-		<input type="checkbox" name="food" >Hamburger<br>
-		<input type="checkbox" name="food" >Cheeseburger<br>
-		<input type="checkbox" name="food" >McDouble<br>
-		<input type="checkbox" name="food" >Double Cheeseburger<br>
-		<input type="button" onclick="mybutton()" value="ORDER">
+		<input type="checkbox" class="donald" >Big Mac<br>
+		<input type="checkbox" class="donald" >Hamburger<br>
+		<input type="checkbox" class="donald" >Cheeseburger<br>
+		<input type="checkbox" class="donald" >McDouble<br>
+		<input type="checkbox" class="donald" >Double Cheeseburger<br>
+		<input type="button" onclick="mybutton3()" value="ORDER">
 	</form>
-
 </div>
 <script src="jquery-2.2.0.min.js"></script>
 <script>
@@ -164,16 +155,43 @@
 			}
 		})
 })
-	/*$('#b1').on('click',function(){
-		alert("Thanx for order");
-	})*/
 
 </script>
 <script>
 	function mybutton(){
+		if($('.dom').is(':checked')){
 		alert("Thankyou for Ordering,your Order has been registered!");
 	}
-</script>
+	else{
+		alert("select atleast one item to order!!!!");
+	}
+	}
+	function mybutton1(){
+		if($('.hut').is(':checked')){
+		alert("Thankyou for Ordering,your Order has been registered!");
+	}
+	else{
+		alert("select atleast one item to order!!!!");
+	}
+	}
+	function mybutton2(){
+		if($('.kfc').is(':checked')){
+		alert("Thankyou for Ordering,your Order has been registered!");
+	}
+	else{
+		alert("select atleast one item to order!!!!");
+	}
+	}
+	function mybutton3(){
+		if($('.donald').is(':checked')){
+		alert("Thankyou for Ordering,your Order has been registered!");
+	}
+	else{
+		alert("select atleast one item to order!!!!");
+	}
+	}
 
+
+</script>
 </body>
 </html>
