@@ -9,6 +9,10 @@
 			background-color: rgba(0,230,0,.6);
 			text-align: center;
 			font-size: 40px;
+			
+			background-image: cover;
+			height: 200px;
+			width: 1300px;
 		}
 		.food{
 			display:inline-block;
@@ -17,18 +21,28 @@
 			background-size: cover;
 			height: 300px;
 			width:320px;
+			margin-left: 30px;
 		}
 		#set1{
 			position: absolute;
+			display: none;
 		}
 		#set2{
 			position: absolute;
+			display: none;
 		}
 		#set3{
 			position: absolute;
+			display: none;
 		}
 		#set4{
 			position: absolute;
+			display: none;
+		}
+		.food button{
+			text-align: center;
+			border: 2px solid black;
+		
 		}
 	</style>
 </head>
@@ -37,19 +51,20 @@
 	<h1> <b>Zomato Ordering </b></h1>
 </div>
 <div class="food">
-	<img src="http://findthemoat.com/wp-content/uploads/2017/02/dominospizze.jpg" height="250" width="320">
-	<p><b>Menu</b></p>
+	<img src="http://findthemoat.com/wp-content/uploads/2017/02/dominospizze.jpg" height="250" width="280">
+	<button id="b1">Show Menu</button><br>
 	<form id="set1">
 		<input type="checkbox" name="food" >COUNTRY-SPECIAL<br>
 		<input type="checkbox" name="food" >FARM HOUSE<br>
 		<input type="checkbox" name="food" >PEPPY PANEER<br>
 		<input type="checkbox" name="food" >5 PEPPER<br>
-		<input type="checkbox" name="food" >FRESH-VEGGIE<br>
+		<input type="checkbox" name="food" >FRESH-VEGGIE
 	</form>
+	
 </div>
 <div class="food">
-	<img src="http://paypizzapal.com/wp-content/uploads/2014/01/pizza-hut2.jpg" height="250" width="320">
-	<p><b>Menu</b></p>
+	<img src="http://paypizzapal.com/wp-content/uploads/2014/01/pizza-hut2.jpg" height="250" width="280">
+	<button id="b2">Show Menu</button><br>
 	<form id="set2">
 		<input type="checkbox" name="food" >Paneer Vegorama<br>
 		<input type="checkbox" name="food" >Exotica<br>
@@ -57,10 +72,11 @@
 		<input type="checkbox" name="food" >Tandori Paneer<br>
 		<input type="checkbox" name="food" >Country Feast<br>
 	</form>
+	
 </div>
 <div class="food">
-	<img src="http://www.kfc.dk/wp-content/uploads/2016/03/New_logo_0316.png" height="250" width="320">
-	<p><b>Menu</b></p>
+	<img src="http://www.kfc.dk/wp-content/uploads/2016/03/New_logo_0316.png" height="250" width="280">
+	<button id="b3">Show Menu</button><br>
 	<form id=set3>
 		<input type="checkbox" name="food" >Potato Krisper<br>
 		<input type="checkbox" name="food" >Chicken Snacker<br>
@@ -68,10 +84,11 @@
 		<input type="checkbox" name="food" >Chicken Rockin' Burger<br>
 		<input type="checkbox" name="food" >Cheezy Crunch Burger<br>
 	</form>
+	
 </div>
 <div class="food">
-	<img src="http://www.cbelmira.com/wp-content/uploads/2017/05/mcdonalds.jpg" height="250" width="320" >
-	<p><b>Menu</b></p>
+	<img src="http://www.cbelmira.com/wp-content/uploads/2017/05/mcdonalds.jpg" height="250" width="280" >
+	<button id="b4">Show Menu</button><br>
 	<form id="set4">
 		<input type="checkbox" name="food" >Big Mac<br>
 		<input type="checkbox" name="food" >Hamburger<br>
@@ -81,6 +98,59 @@
 	</form>
 
 </div>
+<script src="jquery-2.2.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#b1").on('click',function(){
+			if($(this).html()=="Show Menu") {
+				$(this).html("Hide");
+				$("#set1").show()
+			}
+			else{
+				$(this).html("Show Menu");
+				$("#set1").hide();
+			}
+		})
+		$("#b2").on('click',function(){
+			if($(this).html()=="Show Menu") {
+				$(this).html("Hide");
+				$("#set2").show()
+			}
+			else{
+				$(this).html("Show Menu");
+				$("#set2").hide();
+			}
+		})
+		$("#b3").on('click',function(){
+			if($(this).html()=="Show Menu") {
+				$(this).html("Hide");
+				$("#set3").show()
+			}
+			else{
+				$(this).html("Show Menu");
+				$("#set3").hide();
+			}
+		})
+		$("#b4").on('click',function(){
+			if($(this).html()=="Show Menu") {
+				$(this).html("Hide");
+				$("#set4").show()
+			}
+			else{
+				$(this).html("Show Menu");
+				$("#set4").hide();
+			}
+		})
+
+
+
+
+
+
+
+	})
+
+</script>
 
 
 </body>
